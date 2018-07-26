@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { FormsModule, FormControl, FormBuilder, Validators, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +9,9 @@ import { TetComponent } from './tet/tet.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { ChildComponent } from './child/child.component';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +19,15 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
     LoginComponent,
     TetComponent,
     SignUpComponent,
-    ResetpasswordComponent    
+    ResetpasswordComponent,
+    ChildComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpModule,
+    FormsModule,
     [NgbModule.forRoot()],
     [ AppRoutingModule ],    
     TooltipModule.forRoot()

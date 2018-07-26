@@ -6,7 +6,7 @@ import { SignUpComponent }      from './sign-up/sign-up.component';
 import {ResetpasswordComponent} from './resetpassword/resetpassword.component'
 
 const routes: Routes = [
-  {path:'', component: TetComponent},
+  {path:'',redirectTo :'login',pathMatch : 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'resetpassword', component: ResetpasswordComponent}
@@ -14,7 +14,7 @@ const routes: Routes = [
 
 
 @NgModule({
-	imports: [ RouterModule.forRoot(routes) ],
+ imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

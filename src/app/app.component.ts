@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Idle } from 'idlejs/dist';
 
 
 @Component({
@@ -8,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Template1';
+  idle : any;
+  constructor(){
+  
+}
+
 }
 
 
